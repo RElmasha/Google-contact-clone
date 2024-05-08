@@ -91,14 +91,18 @@ h2{
 }
 .ajoutContact{
 width: 155px;
-height:45px;
-top: 87px;
-left: 32px;
-padding: 10px 0px 0px 0px;
-gap: 10px;
+height:35px;
+padding: 9px 3px 0px 0px;
+
 border-radius: 16px;
 opacity: 0px;
 background: rgba(194, 231, 255, 1);
 
-}
+font-family: Product Sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 16.98px;
+text-align: center;
+color: rgba(0, 29, 53, 1);
 
+}
