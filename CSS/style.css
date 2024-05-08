@@ -85,24 +85,42 @@ h2{
     gap: 11px;
     opacity: 0px;
 }
-.sideBar{
+
+.sideBarParent{
+        height: 100%;
+        overflow-y: hidden;
+        scrollbar-gutter: stable;
+        
+}
+
+.sideBarChild{
     height: 1700px;
    background-color: white;
 }
 .ajoutContact{
-width: 155px;
-height:35px;
-padding: 9px 3px 0px 0px;
+    background: #C2E7FF;
+    row-gap: 30px;
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-evenly;  
+background: #C2E7FF;
 
-border-radius: 16px;
-opacity: 0px;
-background: rgba(194, 231, 255, 1);
+}
+.textAjoutContact{
+    display: flex;
+    /* flex-grow: 1; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
 
-font-family: Product Sans;
-font-size: 14px;
-font-weight: 400;
-line-height: 16.98px;
-text-align: center;
-color: rgba(0, 29, 53, 1);
-
+.listContact{
+    padding: 10px;
+    margin: 10px;
+    background: #C2E7FF;
+    border-radius: 10px;
 }
