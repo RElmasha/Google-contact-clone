@@ -1,6 +1,9 @@
 /* Ici commence le svgStyle */
 
-
+.svgSearch{
+    width: 14px;
+gap: 0px;
+}
 
 
 
@@ -123,4 +126,20 @@ background: #C2E7FF;
     margin: 10px;
     background: #C2E7FF;
     border-radius: 10px;
+    width: 50%;
+}
+.FrequentStyle{
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+}
+.libelle{
+        font-family: Product Sans;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16.98px;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
 }
