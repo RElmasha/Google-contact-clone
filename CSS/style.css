@@ -14,6 +14,12 @@ body{
      background: rgba(246, 248, 252, 1);
 
 }
+main{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+}
 
 .positionHeader{
 display: flex;
@@ -90,16 +96,22 @@ h2{
 }
 
 .sideBarParent{
-        height: 100%;
-        overflow-y: hidden;
-        scrollbar-gutter: stable;
+    display: block;
+    width: 25%;
+    height: 1700px;
+    overflow-y: hidden;
+    scrollbar-gutter: stable;
+    border-right: 1px solid burlywood;
         
 }
 
 .sideBarChild{
-    height: 1700px;
-   background-color: white;
-}
+        display: flex;
+        height: 1700px;
+        width: 80%;
+        background-color: white;
+    }
+
 .ajoutContact{
     background: #C2E7FF;
     row-gap: 30px;
