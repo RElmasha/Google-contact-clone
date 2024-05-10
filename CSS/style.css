@@ -1,7 +1,7 @@
 /* Ici commence le svgStyle .svgSearch {
     width: 14px;
     gap: 0px;
-}
+}vu                               
 
 
 
@@ -20,11 +20,7 @@ main {
     justify-content: flex-start; */
 }
 
-.positionHeader {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 200px 1px 17px;
-}
+
 
 .svgStyle {
     width: 23px;

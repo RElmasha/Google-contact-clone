@@ -5,12 +5,13 @@ body {
 }
 
 .container {
-
+    width: 170%;
     margin: 10px auto;
     padding: 20% auto;
     border: 1px solid transparent;
     border-radius: 5px;
     background-color: transparent;
+    margin: 10px;
 }
 
 .form-group {
@@ -44,6 +45,7 @@ textarea {
 
 button {
     padding: 10px 20px;
+    margin: 5px;
     background-color: #b2d2f3;
     color: #fff;
     border: none;
@@ -52,5 +54,19 @@ button {
 }
 
 button:hover {
-    background-color: #b2d2f3;
+    background-color: #1b5894;
+}
+
+.borderStyle {
+    width: 85%;
+    border-style: outset;
+    border-color: #b2d2f3;
+}
+
+.libelle {
+
+    margin: 5px;
+    color: #0b0a0a;
+    border: none;
+    cursor: pointer;
 }
