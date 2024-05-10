@@ -4,7 +4,7 @@ function toggleSideBar() {
    const sidebar = document.getElementById("sidebar")
    if (sidebar.style.display === "none") {
       sidebar.style.display = "block";
-      document.getElementById("content").style.display = "block";
+      document.getElementsByTagName("main").style.display = "inline";
 
       // document.getElementById("contactList").style.marginLeft = "20%";
       // document.getElementById("contactList").style.display = "flex";
