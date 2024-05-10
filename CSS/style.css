@@ -82,32 +82,30 @@ background: rgba(238, 240, 242, 1);
 a{
     text-decoration: none;
     color: black;
+    
 }
 
-h2{
-    width: 143px;
-    height: 17px;
-    padding: 20px 0px 0px 12px;
-    gap: 11px;
-    opacity: 0px;
-}
 
 .sideBarParent{
     display: block;
-    width: 25%;
     height: 1700px;
+    width: 20%;
+    margin-left: 3%;
     overflow-y: hidden;
     scrollbar-gutter: stable;
-    border-right: 1px solid burlywood;
-        
+           
 }
 
 .sideBarChild{
-        display: flex;
+    display: block;
         height: 1700px;
         width: 80%;
         background-color: white;
-    }
+        border: 1px solid  #b2d2f3;
+        border-style: outset;
+               border-radius: 5px;
+            margin: 10px auto;
+               }
 
 .ajoutContact{
     background: #C2E7FF;
@@ -119,15 +117,13 @@ h2{
 background: #C2E7FF;
 
 }
-.textAjoutContact{
+.styleButtonSideBar{
     display: flex;
-    /* flex-grow: 1; */
-    overflow: hidden;
+      overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    justify-content: space-evenly;
-    align-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .listContact{
@@ -135,7 +131,7 @@ background: #C2E7FF;
     margin: 10px;
     background: #C2E7FF;
     border-radius: 10px;
-    width: 50%;
+    cursor: pointer;
 }
 .FrequentStyle{
     padding: 10px;
@@ -143,12 +139,16 @@ background: #C2E7FF;
     width: 50%;
 }
 .libelle{
-        font-family: Product Sans;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 16.98px;
-        text-align: left;
-        display: flex;
-        justify-content: space-between;
-        width: 55%;
+    font-family: Product Sans;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.98px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+}
+
+button:hover {
+    background-color: #b2d2f3;
 }
