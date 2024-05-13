@@ -25,3 +25,15 @@ showContactsList.addEventListener("click", function () {
    document.getElementById("addContact").style.display = "none";
    document.getElementById("contactList").style.display = "flex";
 })
+
+const array = document.querySelector("tbody");
+document.getElementById("contactLength").innerHTML = array.length
+
+
+
+let clickLibelle = document.querySelector("clickLibelle")
+
+clickLibelle.addEventListener('click', function () {
+   document.getElementById("popup").style.display = "block";
+})
+document.addEventListener("p")

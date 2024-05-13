@@ -8,10 +8,7 @@
 
 
 /* Ici commence le style */
-body {
-    background: rgba(246, 248, 252, 1);
 
-}
 
 main {
     display: inline-block;
@@ -36,17 +33,6 @@ main {
     height: 39px;
 }
 
-.search--Style {
-    width: 473px;
-    height: 39.49px;
-    top: 21px;
-    left: 287px;
-    padding: 10px 2px 1px 17px;
-    border-radius: 8px;
-    opacity: 0px;
-    background: rgba(238, 240, 242, 1);
-
-}
 
 .menuStyle {
     display: flex;
