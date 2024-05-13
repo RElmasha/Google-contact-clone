@@ -94,7 +94,7 @@
           </a></div>
 
         <div>
-          <a href="#" class="libelle" id="clickLibelle">
+          <button href="#" class="libelle" id="show-popup">
             Libellés
             <span>
               <svg class="svgSearch" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -103,67 +103,26 @@
                   d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
               </svg>
             </span>
-          </a>
+          </button>
 
         </div>
 
-        <div class="defilement"></div>
-
-        <div class="popup" id="popup">
-          <div class="popup-encart"></div>
-          <div class="popup-contenu">
+        <div id="popup-form-container" style="display: block;">
+          <form>
             <input class="inputStyle form-control me-2" type="text" name="addlibelle" id="addlibelle"
               placeholder="add libelle">
             <button type="button">delet</button>
             <button type="button">add</button>
-          </div>
+          </form>
         </div>
+
 
       </section>
 
       <section class="borderStyle section">
         <div class="content" id="contactList">
           <div class="container">
-            <h2>Contacts <p id="contactLength"></p>
-            </h2>
-            <table>
-              <thead>
-                <tr>
-                  <th>Titre</th>
-                  <th>E-mail</th>
-                  <th>Numéro de tééphone</th>
-                  <th>Fonction et entreprise</th>
-                  <th>Libellés</th>
-                </tr>
-              </thead>
 
-              <tbody>
-                <tr>
-
-                  <td>
-                    <span class="initial">
-                      F
-                    </span>
-                    Francois Disubi
-                  </td>
-                  <td>francois@kadea.co
-
-                  </td>
-                  <td>+234 823 434 234</td>
-
-                  <td>Coach développeur, kadea academy</td>
-
-                  <td>
-                    <button class="">Bureau</button>
-
-                  </td>
-
-                </tr>
-
-
-              </tbody>
-
-            </table>
 
 
           </div>

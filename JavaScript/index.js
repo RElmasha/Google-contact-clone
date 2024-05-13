@@ -31,9 +31,24 @@ document.getElementById("contactLength").innerHTML = array.length
 
 
 
-let clickLibelle = document.querySelector("clickLibelle")
+function showPopupForm() {
+   document.getElementById("popup-form-container").style.display = "flex";
+}
 
-clickLibelle.addEventListener('click', function () {
-   document.getElementById("popup").style.display = "block";
-})
-document.addEventListener("p")
+function hidePopupForm() {
+   document.getElementById("popup-form-container").style.display = "none";
+}
+
+
+const popup = document.getElementById('show-popup')
+
+popup.addEventListener("DOMContentLoaded", () => {
+   document.addEventListener('click', () => {
+      showPopupForm();
+   });
+
+   document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape')
+         hidePopupForm()
+   });
+});
