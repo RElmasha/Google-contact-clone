@@ -70,6 +70,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 select {
     width: 30%;
     padding: 10px;
@@ -180,4 +181,51 @@ main {
     align-content: center;
     align-items: center;
     width: 20%;
+<<<<<<< HEAD
+=======
+}
+
+#popup-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#popup-form-container form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.popup-contenu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 25px;
+    background: white;
+    transform: translate(-50%, -50%)
+}
+
+
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    gap: .8rem;
+    display: inline-flex;
+    padding: 10px 20px;
+    margin: 5px;
+    color: #080202;
+    cursor: pointer;
+>>>>>>> 88a102ad6d5c7429d3eb302358a67bdbbdb4181b
 }
