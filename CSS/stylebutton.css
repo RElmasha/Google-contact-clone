@@ -181,8 +181,6 @@ main {
     align-content: center;
     align-items: center;
     width: 20%;
-<<<<<<< HEAD
-=======
 }
 
 #popup-form-container {
@@ -227,5 +225,4 @@ a {
     margin: 5px;
     color: #080202;
     cursor: pointer;
->>>>>>> 88a102ad6d5c7429d3eb302358a67bdbbdb4181b
 }
