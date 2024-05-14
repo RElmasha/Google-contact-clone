@@ -31,24 +31,3 @@ document.getElementById("contactLength").innerHTML = array.length
 
 
 
-function showPopupForm() {
-   document.getElementById("popup-form-container").style.display = "flex";
-}
-
-function hidePopupForm() {
-   document.getElementById("popup-form-container").style.display = "none";
-}
-
-
-const popup = document.getElementById('show-popup')
-
-popup.addEventListener("DOMContentLoaded", () => {
-   document.addEventListener('click', () => {
-      showPopupForm();
-   });
-
-   document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape')
-         hidePopupForm()
-   });
-});
