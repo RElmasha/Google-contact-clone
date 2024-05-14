@@ -3,8 +3,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
   <link rel="stylesheet" href="/CSS/fon.css">
 
   <link rel="stylesheet" href="/CSS/stylebutton.css">
@@ -12,7 +17,8 @@
 </head>
 
 <body style="background-color:rgba(238, 240, 242, 1);;">
-  <header">
+
+  <header>
 
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid positionHeader">
@@ -84,7 +90,7 @@
           Contact
         </button>
 
-        <div class="FrequentStyle"> <a href="#" class="styleButtonSideBar"> <svg width="21" height="18"
+        <div class="listContact"> <a href="#" class="styleButtonSideBar"> <svg width="21" height="18"
               viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M12.5 5H11V10L15.28 12.54L16 11.33L12.5 9.25V5ZM12 0C9.61305 0 7.32387 0.948211 5.63604 2.63604C3.94821 4.32387 3 6.61305 3 9H0L3.96 13.03L8 9H5C5 7.14348 5.7375 5.36301 7.05025 4.05025C8.36301 2.7375 10.1435 2 12 2C13.8565 2 15.637 2.7375 16.9497 4.05025C18.2625 5.36301 19 7.14348 19 9C19 10.8565 18.2625 12.637 16.9497 13.9497C15.637 15.2625 13.8565 16 12 16C10.07 16 8.32 15.21 7.06 13.94L5.64 15.36C6.47161 16.2004 7.46234 16.8668 8.55433 17.32C9.64632 17.7733 10.8177 18.0045 12 18C14.3869 18 16.6761 17.0518 18.364 15.364C20.0518 13.6761 21 11.3869 21 9C21 6.61305 20.0518 4.32387 18.364 2.63604C16.6761 0.948211 14.3869 0 12 0Z"
@@ -94,7 +100,7 @@
           </a></div>
 
         <div>
-          <button href="#" class="libelle" id="show-popup">
+          <a href="#" class="libelle" id="show-popup">
             Libellés
             <span>
               <svg class="svgSearch" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -103,11 +109,11 @@
                   d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
               </svg>
             </span>
-          </button>
+          </a>
 
         </div>
 
-        <div id="popup-form-container" style="display: block;">
+        <div id="popup-form-container" style="display: none;">
           <form>
             <input class="inputStyle form-control me-2" type="text" name="addlibelle" id="addlibelle"
               placeholder="add libelle">
@@ -120,17 +126,15 @@
       </section>
 
       <section class="borderStyle section">
+        <input type="button" value="Generate a table." onclick="generate_table()" />
         <div class="content" id="contactList">
-          <div class="container">
 
-
-
-          </div>
         </div>
         <div class="content" id="addContact" style="display: none;">
           <div class="container  ">
             <h2>Add Contacts</h2>
-            <form action="#" method="post">
+
+            <form action="#" method="#">
 
               <div class="form-group">
                 <label for="prenom">Prénom :</label>
@@ -157,6 +161,10 @@
                 <a href="#">Ajouter une adresse contact</a>
               </div>
               <div class="form-group">
+                <label for="tel">Téléphone :</label>
+                <input type="tel" id="tel" name="tel" required>
+              </div>
+              <div class="form-group">
                 <label for="anniversaire">Date d'anniversaire :</label>
                 <input type="date" id="anniversaire" name="anniversaire">
               </div>
@@ -164,7 +172,7 @@
                 <label for="note">Note :</label>
                 <textarea id="note" name="note"></textarea>
               </div>
-              <button type="submit">Envoyer</button>
+              <input type="submit" value="Envoyer" id="submit" />
             </form>
           </div>
 
@@ -183,6 +191,13 @@
 
 
     <script src="/JavaScript/index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

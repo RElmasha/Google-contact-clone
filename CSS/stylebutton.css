@@ -70,6 +70,7 @@ label {
 
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 select {
     width: 30%;
     padding: 10px;
@@ -211,4 +212,17 @@ main {
     padding: 25px;
     background: white;
     transform: translate(-50%, -50%)
+}
+
+
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    gap: .8rem;
+    display: inline-flex;
+    padding: 10px 20px;
+    margin: 5px;
+    color: #080202;
+    cursor: pointer;
 }
