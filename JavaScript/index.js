@@ -114,3 +114,7 @@ document.getElementById("submit").addEventListener("click", function (event) {
    event.preventDefault(); // Empêcher le rechargement de la page
    ajouterContact();
 });
+
+const a = document.getElementById("contactTable");
+const b = document.getAnimations("count ");
+b.innerHTML = a.length

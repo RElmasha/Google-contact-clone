@@ -62,3 +62,8 @@ main {
     flex-direction: row;
     justify-content: flex-start;
 }
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
