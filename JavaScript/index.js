@@ -117,4 +117,7 @@ document.getElementById("submit").addEventListener("click", function (event) {
 
 const a = document.getElementById("contactTable");
 const b = document.getAnimations("count ");
-b.innerHTML = a.length
+for (let index = 0; index < a.length; index++) {
+   b.innerHTML = a[index];
+
+}
