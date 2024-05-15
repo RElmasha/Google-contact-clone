@@ -26,10 +26,6 @@ showContactsList.addEventListener("click", function () {
    document.getElementById("contactList").style.display = "flex";
 })
 
-//const array = document.querySelector("tbody");
-//document.getElementById("contactLength").innerHTML = array.length
-
-
 
 function showPopupForm() {
    document.getElementById("popup-form-container").style.display = "flex";
@@ -48,6 +44,23 @@ document.addEventListener('keydown', (event) => {
    if (event.key === 'Escape')
       hidePopupForm()
 });
+
+
+function exitLabelle() {
+   const libelle = document.getElementById("popup-form-container")
+   libelle.style.display = "none"
+
+}
+
+function addLibelle() {
+
+}
+
+const disable = document.getElementById("not")
+disable.addEventListener("click", () => {
+   exitLabelle()
+})
+
 
 function ajouterContact() {
    // Récupérer les valeurs des champs du formulaire
@@ -110,10 +123,21 @@ function ajouterContact() {
 }
 
 
-document.getElementById("submit").addEventListener("click", function (event) {
-   event.preventDefault(); // Empêcher le rechargement de la page
-   ajouterContact();
-});
+document.getElementById("submit").addEventListener("click",
+   function (event) {
+      event.preventDefault(); // Empêcher le rechargement de la page
+      ajouterContact();
+
+      document.getElementById("addContact").style.display = "none";
+      document.getElementById("contactList").style.display = "flex";
+   })
+
+
+
+/**
+** count
+**/
+
 
 const a = document.getElementById("contactTable");
 const b = document.getAnimations("count ");
@@ -121,3 +145,4 @@ for (let index = 0; index < a.length; index++) {
    b.innerHTML = a[index];
 
 }
+
