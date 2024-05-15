@@ -1,0 +1,40 @@
+button {
+    gap: .8rem;
+    display: inline-flex;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #b2d2f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1b5894;
+}
+
+.divButton {
+    display: inline;
+}
+
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color
+}
+
+/* buttonSearch style */
+.search--Style {
+    display: flex;
+    width: 20rem;
+    height: 39.49px;
+
+    padding-left: 1rem;
+    border-radius: 8px;
+    background: rgba(238, 240, 242, 1);
+    align-items: center;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}

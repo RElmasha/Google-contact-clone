@@ -49,107 +49,68 @@ document.addEventListener('keydown', (event) => {
       hidePopupForm()
 });
 
+function ajouterContact() {
+   // Récupérer les valeurs des champs du formulaire
+   const prenom = document.getElementById("prenom").value;
+   const nom = document.getElementById("nom").value;
+   const entreprise = document.getElementById("entreprise").value;
+   const fonction = document.getElementById("fonction").value;
+   const email = document.getElementById("email").value;
+   const telephone = document.getElementById("tel").value;
+   const anniversaire = document.getElementById("anniversaire").value;
+   const note = document.getElementById("note").value;
 
-function creatContact() {
-   const prenomValue = document.getElementById("prenom").value;
-   const nomValue = document.getElementById("nom").value;
-   const entrepriseValue = document.getElementById("entreprise").value;
-   const fonctionValue = document.getElementById("fonction").value;
-   const emailValue = document.getElementById("email").value
-   const telValue = document.getElementById("tel").value;
+   // Vérifier si le contact existe déjà dans le tableau
+   const contactList = document.getElementById("contactTable").getElementsByTagName("tbody")[0];
+   const rows = contactList.getElementsByTagName("tr");
 
-
-   const contactListTable = []
-   const object =
-   {
-      prenom: prenomValue,
-      Nom: nomValue,
-      Entreprise: entrepriseValue,
-      Fonction: fonctionValue,
-      email: emailValue,
-      tel: telValue
-
-   }
-   contactListTable.push(object)
-   contactAdded.append(contactListTable)
-
-   // let object = books.find(
-   //    function (book) {
-
-   //       return book => book.title == title
-   //    });
-
-   // if (object) {
-   //    return object
-   // }
-
-   // else {
-   //    object = { title, author, publicationYear, isCheckedOut: false }
-   //    books.push(object)
-
-   //    return object
-
-}
-
-/**   
- * * Table start here
- * */
-function generate_table() {
-   /**
- * * get the reference for the body
- * */
-   const body = document.getElementsByTagName("body")[0];
-
-   /**
-    ** creates a <table> element and a <tbody> element
-   **/
-
-   const tbl = document.createElement("table");
-   const tblBody = document.createElement("tbody");
-
-   // creating all cells
-   for (let i = 0; i < 2; i++) {
-      // creates a table row
-      const row = document.createElement("tr");
-
-      for (var j = 0; j < 2; j++) {
-         /**
-    ** Create a <td> element and a text node, make the text
-** node the contents of the <td>, and put the <td> at
-** the end of the table row
-   **/
-         const cell = document.createElement("td");
-         const cellText = document.createTextNode(
-            "cell in row " + i + ", column " + j,
-         );
-         cell.appendChild(cellText);
-         row.appendChild(cell);
+   for (let i = 0; i < rows.length; i++) {
+      const rowData = rows[i].getElementsByTagName("td");
+      if (rowData[0].innerText === prenom &&
+         rowData[1].innerText === nom &&
+         rowData[2].innerText === entreprise &&
+         rowData[3].innerText === fonction &&
+         rowData[4].innerText === email &&
+         rowData[5].innerText === telephone &&
+         rowData[6].innerText === anniversaire &&
+         rowData[7].innerText === note) {
+         // Si le contact existe déjà, informer l'utilisateur
+         alert("Le contact existe déjà !");
+         return; // Arrêter la fonction
       }
-
-      /**
-       * *add the row to the end of the table body
-       * */
-
-      tblBody.appendChild(row);
    }
 
-   /**
-       * * put the <tbody> in the <table>
-       * */
+   // Créer un nouvel élément de ligne <tr> pour le contact
+   const newRow = document.createElement("tr");
 
-   tbl.appendChild(tblBody);
+   // Remplir la ligne avec les données du contact
+   newRow.innerHTML = `
+        <td>${prenom}</td>
+        <td>${nom}</td>
+        <td>${entreprise}</td>
+        <td>${fonction}</td>
+        <td>${email}</td>
+        <td>${telephone}</td>
+        <td>${anniversaire}</td>
+        <td>${note}</td>
+    `;
 
-   /**
-    * * appends <table> into <body> named contactList
-    * * appends <table> into <body> named contactList
-    */
+   // Ajouter la nouvelle ligne à la table contactList
+   contactList.appendChild(newRow);
 
-   body.appendChild(tbl);
-
-   // sets the border attribute of tbl to 2;
-   tbl.setAttribute("border", "2");
+   // Réinitialiser les valeurs des champs du formulaire
+   document.getElementById("prenom").value = "";
+   document.getElementById("nom").value = "";
+   document.getElementById("entreprise").value = "";
+   document.getElementById("fonction").value = "";
+   document.getElementById("email").value = "";
+   document.getElementById("tel").value = "";
+   document.getElementById("anniversaire").value = "";
+   document.getElementById("note").value = "";
 }
 
-const button = document.getElementById("submit")
-const list = document.getElementById("contactList")
-list = button.value
+
+document.getElementById("submit").addEventListener("click", function (event) {
+   event.preventDefault(); // Empêcher le rechargement de la page
+   ajouterContact();
+});
