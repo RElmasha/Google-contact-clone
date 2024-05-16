@@ -22,9 +22,6 @@ AddContacts.addEventListener("click", function () {
    document.getElementById("addContact").style.display = "block";
 })
 
-// AddContacts.addEventListener("mouseover", () => {
-//    AddContacts.style.boxShadow = "10px 5px 5px red"
-// })
 
 const showContactsList = document.getElementById("showContactList")
 showContactsList.addEventListener("click", function () {
@@ -136,7 +133,6 @@ document.getElementById("submit").addEventListener("click",
    function (event) {
       event.preventDefault(); // Empêcher le rechargement de la page
       ajouterContact();
-
       document.getElementById("addContact").style.display = "none";
       document.getElementById("contactList").style.display = "flex";
 
