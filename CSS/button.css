@@ -10,8 +10,10 @@ button {
     cursor: pointer;
 }
 
+
 button:hover {
-    background-color: #1b5894;
+
+    box-shadow: 10px 5px 5px #00000058;
 }
 
 .divButton {
@@ -20,7 +22,8 @@ button:hover {
 
 button:focus {
     outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color
+    outline: 5px auto -webkit-focus-ring-color;
+
 }
 
 /* buttonSearch style */
@@ -37,4 +40,32 @@ button:focus {
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.buttonBergerStyle:hover {
+    background-color: #5f63682f;
+    border-radius: 10%;
+    box-shadow: none;
+
+}
+
+.buttonBergerStyle {
+    background-color: transparent;
+
+}
+
+.svgStyle {
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+
+    overflow: hidden;
+    vertical-align: middle;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    flex: 0 0 auto;
+    color: #5f6368;
+    opacity: 1;
+    fill: currentColor;
 }

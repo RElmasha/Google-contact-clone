@@ -1,4 +1,6 @@
 const buttonBerger = document.getElementById("buttonBerger")
+let count = 0;
+const counter = document.getElementById("count")
 
 function toggleSideBar() {
    const sidebar = document.getElementById("sidebar")
@@ -19,6 +21,10 @@ AddContacts.addEventListener("click", function () {
    document.getElementById("contactList").style.display = "none";
    document.getElementById("addContact").style.display = "block";
 })
+
+// AddContacts.addEventListener("mouseover", () => {
+//    AddContacts.style.boxShadow = "10px 5px 5px red"
+// })
 
 const showContactsList = document.getElementById("showContactList")
 showContactsList.addEventListener("click", function () {
@@ -63,6 +69,8 @@ disable.addEventListener("click", () => {
 
 
 function ajouterContact() {
+   // créer un counter de repertoire
+   counter.innerHTML = `( ${++count} )`
    // Récupérer les valeurs des champs du formulaire
    const prenom = document.getElementById("prenom").value;
    const nom = document.getElementById("nom").value;
@@ -109,6 +117,7 @@ function ajouterContact() {
     `;
 
    // Ajouter la nouvelle ligne à la table contactList
+
    contactList.appendChild(newRow);
 
    // Réinitialiser les valeurs des champs du formulaire
@@ -130,19 +139,6 @@ document.getElementById("submit").addEventListener("click",
 
       document.getElementById("addContact").style.display = "none";
       document.getElementById("contactList").style.display = "flex";
+
    })
-
-
-
-/**
-** count
-**/
-
-
-const a = document.getElementById("contactTable");
-const b = document.getAnimations("count ");
-for (let index = 0; index < a.length; index++) {
-   b.innerHTML = a[index];
-
-}
 
