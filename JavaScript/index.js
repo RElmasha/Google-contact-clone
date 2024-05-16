@@ -98,9 +98,15 @@ function ajouterContact() {
       }
    }
 
-   // Créer un nouvel élément de ligne <tr> pour le contact
+   // Créer un nouvel élément de ligne <tr> pour le contact avec 2 boutons
    const newRow = document.createElement("tr");
+   const buttonModify = document.createElement("button");
+   const buttonDelet = document.createElement("button");
 
+   // Créer un id pour chaque bouton
+   buttonModify.setAttribute("id", "modify")
+   buttonDelet.setAttribute("id", "delet")
+   newRow.setAttribute("id", "row")
    // Remplir la ligne avec les données du contact
    newRow.innerHTML = `
         <td>${prenom}</td>
@@ -111,10 +117,18 @@ function ajouterContact() {
         <td>${telephone}</td>
         
     `;
-
+   buttonModify.innerText = "Modifier"
+   buttonDelet.innerText = "Supprimer"
    // Ajouter la nouvelle ligne à la table contactList
-
+   newRow.appendChild(buttonModify);
+   newRow.appendChild(buttonDelet);
    contactList.appendChild(newRow);
+
+   // style du bouton
+   const modify = document.getElementById("modify");
+   const delet = document.getElementById("delet");
+   modify.style.boxShadow = "none";
+   delet.style.boxShadow = "none";
 
    // Réinitialiser les valeurs des champs du formulaire
    document.getElementById("prenom").value = "";
@@ -125,6 +139,20 @@ function ajouterContact() {
    document.getElementById("tel").value = "";
    document.getElementById("anniversaire").value = "";
    document.getElementById("note").value = "";
+
+   // Event
+
+
+   delet.addEventListener("click", () => {
+      const row = document.getElementById("row")
+      row.remove()
+   })
+
+   modify.addEventListener("click", () => {
+      const row = document.getElementById("row")
+      row.inputMode
+   })
+
 }
 
 
@@ -136,4 +164,5 @@ document.getElementById("submit").addEventListener("click",
       document.getElementById("contactList").style.display = "flex";
 
    })
+
 

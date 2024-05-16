@@ -1,9 +1,5 @@
 .sidbar {
-    display: inline;
-    gap: .3rem;
-    align-content: center;
-    align-items: center;
-    width: 20%;
+    margin: 1rem;
 }
 
 .FrequentStyle {
