@@ -109,8 +109,7 @@ function ajouterContact() {
         <td>${fonction}</td>
         <td>${email}</td>
         <td>${telephone}</td>
-        <td>${anniversaire}</td>
-        <td>${note}</td>
+        
     `;
 
    // Ajouter la nouvelle ligne à la table contactList
