@@ -31,7 +31,7 @@
 
 </head>
 
-<body class="bg-body-tertiary">
+<body>
 
   <header>
 
@@ -79,7 +79,7 @@
 
   <main>
 
-    <section id="sidebar" class="sidebar">
+    <section id="sidebar" class="sidebar bg-body-tertiary ">
       <div>
 
         <button class="listContact  styleButtonSideBar" id="add">
@@ -145,9 +145,9 @@
     </section>
 
 
-    <section>
+    <section class="borderStyle">
       <div class="content" id="contactList">
-        <table id="contactTable">
+        <table id="contactTable" class="contactTable">
 
           <div class="counter">
             <h2 class="h2"> Contact list</h2>
@@ -168,6 +168,7 @@
           </tbody>
         </table>
       </div>
+
       <div class="content" id="addContact" style="display: none;">
         <div class="container  ">
           <h2>Add Contacts</h2>
@@ -196,7 +197,7 @@
               <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-              <a href="#">Ajouter une adresse contact</a>
+              <a id="addMail" href="#">Ajouter une adresse mail</a>
             </div>
             <div class="form-group">
               <label for="tel">Téléphone :</label>
@@ -217,7 +218,7 @@
       </div>
 
     </section>
-    </section>
+
   </main>
 
 

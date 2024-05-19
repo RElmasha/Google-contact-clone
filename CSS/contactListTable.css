@@ -50,5 +50,18 @@
 
 .color {
     background-color: white;
-    height: 30px;
+    height: 130%;
+    width: 80%;
+}
+
+.contactTable {
+    width: 60rem;
+}
+
+.borderStyle {
+    border-top: ridge currentColor;
+    border-left: ridge currentcolor;
+    border-width: thin;
+    width: 70rem;
+    height: 50rem;
 }
