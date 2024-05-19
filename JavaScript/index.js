@@ -84,14 +84,7 @@ function ajouterContact() {
 
    for (let i = 0; i < rows.length; i++) {
       const rowData = rows[i].getElementsByTagName("td");
-      if (rowData[0].innerText === prenom &&
-         rowData[1].innerText === nom &&
-         rowData[2].innerText === entreprise &&
-         rowData[3].innerText === fonction &&
-         rowData[4].innerText === email &&
-         rowData[5].innerText === telephone &&
-         rowData[6].innerText === anniversaire &&
-         rowData[7].innerText === note) {
+      if (rowData[5].innerText === telephone) {
          // Si le contact existe déjà, informer l'utilisateur
          alert("Le contact existe déjà !");
          return; // Arrêter la fonction
@@ -164,5 +157,47 @@ document.getElementById("submit").addEventListener("click",
       document.getElementById("contactList").style.display = "flex";
 
    })
+
+// libellée
+document.getElementById('save').addEventListener('click', function () {
+   // Get the value from the input field
+   const newLabel = document.getElementById('addlibelle').value;
+
+
+   // Check if the input is not empty
+   if (newLabel.trim() !== "") {
+      // Create a svg element
+
+      const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
+      svg.setAttribute('width', '16')
+      svg.setAttribute('height', '16')
+      svg.setAttribute('fill', 'currentColor')
+      svg.setAttribute('class', 'bi bi-caret-right-fill')
+      svg.setAttribute('viewBox', '0 0 16 16')
+
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', 'm12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z')
+      svg.appendChild(path)
+
+      // Create a new div element for the label
+      const labelDiv = document.createElement('div');
+      labelDiv.className = 'label-item';
+      labelDiv.appendChild(svg)
+      labelDiv.appendChild(document.createTextNode(" " + newLabel))
+
+      // style
+      labelDiv.style.marginLeft = "2rem";
+
+      // Append the new label to the labelList div
+      document.getElementById('labelList').appendChild(labelDiv);
+
+      // reset the input aeria
+      document.getElementById('addlibelle').value = "";
+   } else {
+      alert("Le libellé ne peut pas être vide.");
+   }
+});
+
 
 
