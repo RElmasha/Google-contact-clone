@@ -1,12 +1,12 @@
 const buttonBerger = document.getElementById("buttonBerger")
 let count = 0;
-const counter = document.getElementById("count")
+const counter = document.getElementById("counted")
 
 function toggleSideBar() {
    const sidebar = document.getElementById("sidebar")
    if (sidebar.style.display === "none") {
       sidebar.style.display = "block";
-      document.getElementsByTagName("main").style.display = "inline";
+
    } else {
 
       sidebar.style.display = "none";
@@ -63,8 +63,10 @@ disable.addEventListener("click", () => {
 
 
 function ajouterContact() {
+   // const countID = crypto.randomUUID()
    // créer un counter de repertoire
    counter.innerHTML = `( ${++count} )`
+
    // Récupérer les valeurs des champs du formulaire
    const prenom = document.getElementById("prenom").value;
    const nom = document.getElementById("nom").value;
@@ -94,9 +96,10 @@ function ajouterContact() {
    const buttonDelet = document.createElement("button");
 
    // Créer un id pour chaque bouton
-   buttonModify.setAttribute("id", "modify")
-   buttonDelet.setAttribute("id", "delet")
-   newRow.setAttribute("id", "row")
+   buttonModify.setAttribute("id", count)
+   buttonDelet.setAttribute("id", count)
+   newRow.setAttribute("id", count)
+
    // Remplir la ligne avec les données du contact
    newRow.innerHTML = `
         <td>${prenom}</td>
@@ -115,8 +118,8 @@ function ajouterContact() {
    contactList.appendChild(newRow);
 
    // style du bouton
-   const modify = document.getElementById("modify");
-   const delet = document.getElementById("delet");
+   const modify = document.getElementById(count);
+   const delet = document.getElementById(count);
    modify.style.boxShadow = "none";
    delet.style.boxShadow = "none";
 
@@ -134,13 +137,16 @@ function ajouterContact() {
 
 
    delet.addEventListener("click", () => {
-      const row = document.getElementById("row")
+      const row = document.getElementById(count)
       row.remove()
-   })
+      counter.innerHTML = `( ${--count} )`
+
+   });
+
 
    modify.addEventListener("click", () => {
-      const row = document.getElementById("row")
-      row.inputMode
+      const row = document.getElementById(count)
+      row.sh
    })
 
 }
@@ -194,6 +200,7 @@ document.getElementById('save').addEventListener('click', function () {
    } else {
       alert("Le libellé ne peut pas être vide.");
    }
+
 });
 
 
@@ -210,5 +217,7 @@ addMail.addEventListener("click", function () {
    // Ajoutez le nouvel input et le saut de ligne au conteneur 
    addSeconEmail.appendChild(addMail)
    addSeconEmail.appendChild(br)
-});
+   // reset le champ
+   document.getElementById('email').value = "";
 
+});
