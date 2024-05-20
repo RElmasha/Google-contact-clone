@@ -65,6 +65,10 @@ main {
 
 .content {
     width: 30rem;
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    padding-left: 2rem;
 }

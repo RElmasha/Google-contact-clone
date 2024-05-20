@@ -55,9 +55,6 @@ function exitLabelle() {
 
 }
 
-function addLibelle() {
-
-}
 
 const disable = document.getElementById("not")
 disable.addEventListener("click", () => {
@@ -200,4 +197,18 @@ document.getElementById('save').addEventListener('click', function () {
 });
 
 
+// addMail
+addMail.addEventListener("click", function () {
+   const addSeconEmail = document.getElementById("addSecondEmail")
+   const addMail = document.createElement('input');
+   addMail.setAttribute('type', 'email')
+   addMail.setAttribute('id', 'email')
+   addMail.setAttribute('name', 'email')
+   addMail.setAttribute('placeholder', 'Nouvelle adresse email');
+   // Ajoutez un saut de ligne pour la mise en forme 
+   const br = document.createElement('br');
+   // Ajoutez le nouvel input et le saut de ligne au conteneur 
+   addSeconEmail.appendChild(addMail)
+   addSeconEmail.appendChild(br)
+});
 
